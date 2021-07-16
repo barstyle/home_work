@@ -8,11 +8,10 @@
 # узнаем возраст рождения пользователя
 user_age = input('Введите год вашего ррождения :')
 
-# если вдруг пользователь ввел не число, заводим цикл
-while type(user_age) != int:
-    try:
-        user_age = int(user_age)
-    except ValueError:
+if user_age.isdigit() == True:
+    pass
+else:
+    while user_age.isdigit() != True:
         print('Тип вводимых данных должен быть числом')
         user_age = input('\nПожалуйста, Введите год вашего рождения ЦИФРАМИ :')
 
@@ -28,7 +27,7 @@ while type(what_year) != int:
         what_year = input('\nПожалуйста, Введите год в котором нужно узнать ваш возсраст ЦИФРАМИ :')
 
 # заводим переменную в которой будет храниться резульатат, там же его и вычисляем
-result = what_year - user_age
+result = what_year - int(user_age)
 
 # выводим на экран результат, при условии отрицательного результата, выводим разные сообщения
 if result < 0:
