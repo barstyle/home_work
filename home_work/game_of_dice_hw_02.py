@@ -9,3 +9,23 @@
 - Игра продолжается до тех пор, пока у пользователя не кончаются единицы на депозите
   (используйте цикл while).
 '''
+# Импортируем библиотеку рандом, чтобы ее использовать в будущем
+import random
+
+print("Приветсвую тебя игрок")
+
+deposit_user = 10000
+
+print('Ваш депозит равен - ', deposit_user,  'едениц')
+
+number_casino = random.randint(2, 12)
+
+number_user = input("Введите число от 2 до 12: ")
+
+if number_casino == number_user:
+    print('Угадал')
+else:
+    print("Не Бро, не угадал, выпало число ", number_casino)
+    deposit_user = deposit_user - 1000
+    print('Ваш депозит равен - ', deposit_user,  'едениц')
+
