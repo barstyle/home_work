@@ -20,6 +20,9 @@ deposit_user = 10000
 
 print('Ваш депозит равен - ', deposit_user,  'едениц')
 
+count = 0
+
+the_even_log = []
 
 while deposit_user != 0:
 
@@ -34,8 +37,10 @@ while deposit_user != 0:
 
     number_user = int(number_user)
 
-    if number_casino == int(number_user):
-        print('Угадал')
+    if number_user < 2 or number_user > 12:
+        pass
+    elif number_casino == int(number_user):
+        print('Угадал, выпало число:', number_casino)
         deposit_user = deposit_user + 1000
         print('Ваш депозит равен - ', deposit_user, 'едениц')
     else:
@@ -43,3 +48,15 @@ while deposit_user != 0:
         deposit_user = deposit_user - 1000
         print('Ваш депозит равен -', deposit_user,  'едениц')
 
+    count = count + 1
+    print('Попытка -', count)
+
+    log = []
+    log.append(number_casino)
+    log.append(count)
+    log.append(deposit_user)
+    print(log)
+
+    the_even_log.append(log)
+
+print(the_even_log)
