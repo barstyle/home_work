@@ -22,9 +22,17 @@ print('Ваш депозит равен - ', deposit_user,  'едениц')
 
 
 while deposit_user != 0:
+
     number_casino = random.randint(2, 12)
 
     number_user = input("\nВведите число от 2 до 12: ")
+    if number_user.isdigit() != True:
+        while number_user.isdigit() != True:
+            number_user = input("\nТы ввел не число\nВведите число от 2 до 12: ")
+            if number_user.isdigit() == True:
+                continue
+
+    number_user = int(number_user)
 
     if number_casino == int(number_user):
         print('Угадал')
