@@ -12,20 +12,26 @@
 # Импортируем библиотеку рандом, чтобы ее использовать в будущем
 import random
 
+# Приветсвие
 print("Приветсвую тебя игрок")
 
+# Заводим переменную в котрой хранится депозит
 deposit_user = 10000
 
 print('Ваш депозит равен - ', deposit_user,  'едениц')
 
-number_casino = random.randint(2, 12)
 
-number_user = input("Введите число от 2 до 12: ")
+while deposit_user != 0:
+    number_casino = random.randint(2, 12)
 
-if number_casino == number_user:
-    print('Угадал')
-else:
-    print("Не Бро, не угадал, выпало число ", number_casino)
-    deposit_user = deposit_user - 1000
-    print('Ваш депозит равен - ', deposit_user,  'едениц')
+    number_user = input("\nВведите число от 2 до 12: ")
+
+    if number_casino == int(number_user):
+        print('Угадал')
+        deposit_user = deposit_user + 1000
+        print('Ваш депозит равен - ', deposit_user, 'едениц')
+    else:
+        print("Не Бро, не угадал, выпало число:", number_casino)
+        deposit_user = deposit_user - 1000
+        print('Ваш депозит равен -', deposit_user,  'едениц')
 
