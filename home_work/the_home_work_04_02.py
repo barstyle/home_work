@@ -3,6 +3,7 @@
 На новой работе у Ани появилось три новых подруги - Оля, Настя и Света.
 С помощью множеств (set) найдите, с кем из них у Ани больше всего общих любимых сериалов
 '''
+
 # Словари с сериалами
 anya = {'Секретные материалы': 'фантастика',
         'Карточный домик': 'драма',
@@ -20,10 +21,22 @@ sveta = {'Черное зеркало': 'фантастика',
          'Карточный домик': 'драма',
          'Рик и Морти': 'фантастика'}
 
-# Созадем пустое множество
-likes_show_anya = set()
+# Созадем функцию для создания множества (списка сериалов)
+def like_show(name):
+    likes_show = set()
+    for show in name:
+        likes_show.add(show)
+    return likes_show
 
-for show in anya:
-    likes_show_anya.add(show)
+# Функиця для кол-ва сравнений во множествах
+def diff(name_01, name_02):
+    result = like_show(name_01).intersection(like_show(name_02))
+    return len(result)
 
-print(likes_show_anya)
+# Сравниваем кол-во совпадений
+if diff(anya, olya) > diff(anya, nastya) and diff(anya, olya) > diff(anya, sveta):
+    print('У Ани и Оли больше совпадений')
+elif diff(anya, nastya) > diff(anya, olya) and diff(anya, nastya) > diff(anya, sveta):
+    print('У Ани и Насти больше совпадений')
+else:
+    print('У Ани и Светы больше совпадений')
