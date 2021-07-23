@@ -29,6 +29,13 @@ for name in shows.keys():
 # пустая строка
 print('')
 
-# Цикл - выводит только названия жанров
-for name in shows.values():
-    print(name)
+# Создаем множество, где буцдем хранить жанры
+genres = set()
+
+# Цикл - добавляет жанры во множество
+for genre in shows.values():
+    genres.add(genre)
+
+# Цикл - выводит жанры на экран без повторений
+for genre in genres:
+    print(genre)
