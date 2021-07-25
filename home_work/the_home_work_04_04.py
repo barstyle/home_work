@@ -10,9 +10,18 @@
 
 Используйте while, continue, break.
 '''
+# импортируем билиотеку великого рандома
+import random
 
+# импортируем словари
 from bd_for_hw_04 import shows, ratings
 
+# создаем пустой список, в котором будем хранить сериалы подхлдящие для Васи
+shows_for_vasya = []
+
+# Генериркем этот список
 for film in shows:
-    if shows.setdefault(film) != 'фэнтази':
-        print(film)
+    if shows.setdefault(film) != 'фэнтази' and ratings.setdefault(film) > 0.85:
+        shows_for_vasya.append(film)
+
+print(shows_for_vasya)
