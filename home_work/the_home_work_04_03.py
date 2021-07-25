@@ -32,9 +32,7 @@ def is_which_ratio(genre):
     return ('{}{}{}{}'.format('Среднее занчение ретинга фильмов жанра - ', genre,
                              ' - ', round(result, 2)))
 
-
-
 print(is_which_ratio('фантастика'))
-print(is_which_ratio('криминал'))
-print(is_which_ratio('драма'))
-print(is_which_ratio('фэнтази'))
+# print(is_which_ratio('криминал'))
+# print(is_which_ratio('драма'))
+# print(is_which_ratio('фэнтази'))
