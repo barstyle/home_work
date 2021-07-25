@@ -50,18 +50,18 @@ while deposit_user != 0:
     if number_user.isdigit() != True:
         while number_user.isdigit() != True:
             number_user = input("\nТы ввел не число\nВведите число от 2 до 12: ")
-            if number_user.isdigit() == True:
-                continue
+            # if number_user.isdigit() == True:
+            #     continue
 
     # превращаем значение переменной из строик в число
     number_user = int(number_user)
 
     # Добавляем условие, если пользователь ввел число меньше 2-х или больше 12-и, то ничего не делаем
-    if number_user < 2 or number_user > 12:
-        pass
+    # if number_user < 2 or number_user > 12:
+    #     pass
 
     # Условие - если угадал, прибаляем 1000 к депозиту
-    elif number_casino == int(number_user):
+    if number_casino == int(number_user):
         print('Угадал, выпало число:', number_casino)
         deposit_user = deposit_user + 1000
         print('Ваш депозит равен - ', deposit_user, 'едениц')
@@ -76,12 +76,12 @@ while deposit_user != 0:
     count = count + 1
 
     # Заводим пустой список, для хранения логов каждой итерации
-    log = []
+    log = [number_casino, count, deposit_user]
 
     # Добавляем в него значения
-    log.append(number_casino)
-    log.append(count)
-    log.append(deposit_user)
+    # log.append(number_casino)
+    # log.append(count)
+    # log.append(deposit_user)
     print('Игра загадала -', str(log[0]) + '.', 'Попытка -', str(log[1]) + '.', 'На счету -', str(log[2]) + '.')
 
     # Добалием логи каждого итерации цикла в список для хранения всех логов
