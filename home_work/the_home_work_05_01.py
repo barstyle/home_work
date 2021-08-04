@@ -9,7 +9,7 @@
 - Светы и Ани
 '''
 # импортируем словари
-from bd_for_hw_04 import shows, ratings, sveta, nastya, olya, anya
+from bd_for_hw_04 import sveta, nastya, olya, anya
 
 
 def conjoint(name_01, name_02):
@@ -17,10 +17,10 @@ def conjoint(name_01, name_02):
     for genre in name_01.values():
         if genre in name_02.values():
             likes_genre.add(genre)
-    if len(likes_genre) > 0:
-
-
-
+    if len(likes_genre) == 0:
+        return 'Ноль совпадений, вместе им набирать воду из кулера будет скучно'
+    else:
+        return 'Ура - есть совпадения, это - ' + ' и '.join(likes_genre)
 
 print(conjoint(anya, nastya))
 print()
