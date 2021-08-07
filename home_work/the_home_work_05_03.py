@@ -22,4 +22,4 @@ with open(filename) as file:
                 cat_word_list.append(cat)
                 print(str(j) + '-ая кошка -:', line, '\n')
     print(len(cat_word_list), '- раз встречается в этом тексте слово "кошка".')
-
+file.close()
