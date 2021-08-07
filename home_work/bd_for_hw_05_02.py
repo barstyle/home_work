@@ -16,9 +16,6 @@
 
 from bd_for_hw_04 import shows, ratings
 
-# text = 'Ведьмак'
-# print(shows.setdefault(text))
-
 # Возвращает названия сериалов для заданного жанра
 def shows_select(genre):
     shows_list = []
@@ -27,10 +24,11 @@ def shows_select(genre):
             shows_list.append(text)
     return shows_list
 
-print(shows_select('драма'))
-print(shows_select('криминал'))
-print(shows_select('фэнтази'))
-print(shows_select('фантастика'))
+# тут мы запускади проверочик - как работают функции
+# print(shows_select('драма'))
+# print(shows_select('криминал'))
+# print(shows_select('фэнтази'))
+# print(shows_select('фантастика'))
 
 # должна вернуть средний рейтинг для сериалов из входного списка.
 def ratio_average(shows_set):
@@ -39,6 +37,9 @@ def ratio_average(shows_set):
         average_ratio = average_ratio + ratings.setdefault(i)
     return average_ratio / len(shows_set)
 
-print()
-text = shows_select('фантастика')
-print(ratio_average(text))
+# тут тоже проверки были
+# print()
+# text = shows_select('фантастика')
+# print(ratio_average(text))
+
+# все закомментировали, что бы не результаты не импортироались
