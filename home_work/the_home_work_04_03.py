@@ -21,7 +21,7 @@ def is_which_ratio(genre):
     # создаем переменную с нулевым значением, чтоб посчитать сумму ретинга
     average_ratio = 0
 
-    # в этом циклен считаем сумму рейтингов
+    # в этом цикле считаем сумму рейтингов
     for i in average_list:
         average_ratio = average_ratio + i
 
