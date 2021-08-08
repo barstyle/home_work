@@ -17,9 +17,13 @@ with open(filename) as file:
     line_list = new_lines.split('.')
     for line in line_list:
         for cat in line.split(' '):
+            # если сделать if cat[0:3] == 'кош' - ,будет больше слов кошек
             if cat == 'кошка':
                 j = j + 1
                 cat_word_list.append(cat)
                 print(str(j) + '-ая кошка -:', line, '\n')
     print(len(cat_word_list), '- раз встречается в этом тексте слово "кошка".')
 file.close()
+
+# на самом деле, кошка встречается чаще, но с другими склонениями
+# кошке, кошку и даже кошачьи
