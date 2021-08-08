@@ -7,7 +7,7 @@
 '''
 
 
-# импортируем словарь aver_rait.append(round(float(i.setdefault(k)), 2))
+# импортируем словарь
 from the_home_work_06_shows import shows
 
 # создаем пустые множества, т.к. мы заметили, что не все ключи одинаковы
