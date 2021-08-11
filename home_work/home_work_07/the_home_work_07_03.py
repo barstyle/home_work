@@ -26,6 +26,7 @@ def selection_sort(input_list):
         input_list[i], input_list[min_i] = input_list[min_i], input_list[i]
     return time.time() - start_time # время выполнения в секундах
 
+
 # Генерируется список нужной длины, заполненный случайными целыми числами;
 def as_list(n):
     asist = [x for x in range(n)]
@@ -35,7 +36,7 @@ def as_list(n):
 
 # - Печатается размер списка и время сортировки.
 for i in [1000, 2000, 5000, 10000]:
-    print(f'размер списка равен - {i}, время сортировки равно - {selection_sort(as_list(i))}')
+    print(f'размер списка - {i}, время сортировки - {selection_sort(as_list(i))} сек.')
 
 """
 Вывод:
