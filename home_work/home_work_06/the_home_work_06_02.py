@@ -13,7 +13,7 @@
 # импортируем словарь и библиотеки
 from the_home_work_06_shows import shows
 from functools import reduce
-import os, pickle
+import pickle
 
 
 # Используйте set для получения уникального набора жанров.
