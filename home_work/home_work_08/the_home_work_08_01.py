@@ -9,7 +9,7 @@
 Выведите словарь на экран.
 '''
 
-import requests, re
+import requests
 from bs4 import BeautifulSoup
 
 # С помощью библиотек requests прочитайте содержимое страницы
