@@ -26,6 +26,7 @@ class Student(Person):
     def __str__(self):
         return f'Студент: {self.first_name} {self.last_name}, группа {self.group}, оценки {self.rate}'
 
+
 if __name__ == '__main__':
     one_pers = Student('Асума', 'Сарутоби')
     two_pers = Student('Майто', 'Гай')

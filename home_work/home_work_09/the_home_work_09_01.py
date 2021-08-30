@@ -25,15 +25,7 @@ with open(filename, encoding='utf-8') as r_file:
     count = 0
     # Считывание данных из CSV файла
     for row in file_reader:
-        if re.search(r'Рыбы|Пегас|Кит', row[0]):
-            print(row[0])
-        elif re.search(r'^[a-zA-Z]', row[0]):
-            print(row[0])
-        elif re.search(r'\d$', row[0]):
-            print(row[0])
-        elif re.search(r'(\d [\(\[])', row[0]):
-            print(row[0])
-        elif re.search(r'(\d[\(\[])', row[0]):
+        if re.search(r'Рыбы|Пегас|Кит|^[a-zA-Z]|\d$|(\d [\(\[])|(\d[\(\[])', row[0]):
             print(row[0])
         else:
             count -= 1
