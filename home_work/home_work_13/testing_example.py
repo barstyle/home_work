@@ -14,7 +14,6 @@ def calculate_credit(s, r, n):
                 continue
             else:
                 return 'Значения не должны быть отрицательными'
-
         if n > 1200:
             return 'Срок кредита не должен превышать 100 лет'
         elif s == 0:
@@ -53,7 +52,8 @@ if __name__ == '__main__':
         print('Credit term -', n, '(' + str(int(n/12)), '- years)')
         print('Monthly payment -', calculate_credit(s, r, n))
         print('-'*50)
-    print('-'*100)
-    # print('Monthly payment -', calculate_credit(10, 0.4, 20000))
-    print(calculate_credit(0.0, 0.12, 36))
-    print(calculate_credit(100, 0.12, 1202))
+    print('Monthly payment -', calculate_credit(0.0, 0.12, 36))
+    print('Monthly payment -', calculate_credit(100, 0.12, 1202))
+
+    print(Calculator.sum(0, 2, 2))
+    print(Calculator.mult(0, 3, 3))
